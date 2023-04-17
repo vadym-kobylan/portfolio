@@ -10,7 +10,6 @@ const about = () => {
         <meta name='description' content="any description" />
       </Head>
       <main>
-        <AnimatedText  />
       </main>
     </>
   );
