@@ -8,7 +8,7 @@ const Model = (props) => {
 
   useEffect(() => {
     actions[names[0]].reset().fadeIn(0.5).play();
-  }, []);
+  }, [actions]);
 
   return (
     <group ref={group} {...props} dispose={null}>
