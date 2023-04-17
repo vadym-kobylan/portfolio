@@ -6,7 +6,7 @@ import Model from './Model';
 
 const ModelCanvas = () => (
   <Canvas
-    style={{ height: '620px' }}
+    style={{height: 620}}
     frameloop="demand"
     shadows
     camera={{ position: [1, 1.5, 2.5], fov: 25 }}
