@@ -48,9 +48,9 @@ const about = () => {
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">About me</h2>
               <p className="font-medium">
-                Hi, I'm Vadym Kobylan, a web developer, and I'm passionate about making stunning and
-                engaging digital experiences that that delight users and drive results. I'm always
-                on the hunt for new features to make my projects more attractive.
+                Hi, I&apos;m Vadym Kobylan, a web developer, and I&apos;m passionate about making
+                stunning and engaging digital experiences that that delight users and drive results.
+                I&apos;m always on the hunt for new features to make my projects more attractive.
               </p>
 
               <p className="my-4 font-medium">
@@ -59,8 +59,8 @@ const about = () => {
               </p>
 
               <p className="font-medium">
-                - As a web developer, I'm very excited about the chance to take on fresh challenges
-                and help your company grow with we.
+                - As a web developer, I&apos;m very excited about the chance to take on fresh
+                challenges and help your company grow with we.
               </p>
             </div>
 
