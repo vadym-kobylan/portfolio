@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Skill = ({ name, x, y }) => {
-  return (
-    <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-      py-3 px-6 shadow-dark cursor-pointer absolute "
-      whileHover={{ scale: 1.05 }}
-      initial={{ x: 0, y: 0 }}
-      animate={{ x: x, y: y }}
-      transition={{ duration: 1.5 }}>
-      {name}
-    </motion.div>
-  );
+const SkillElement = ({ elements }) => {
+  return elements.map(({ src, title, style, href }) => (
+    <div key={title}>
+      {href ? (
+        <Link href={href} target={'_blank'}>
+          <div
+            className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg cursor-pointer ${style}`}>
+            <Image src={src} alt="" className="w-20 mx-auto" />
+            <p className="mt-4 ">{title}</p>
+          </div>
+        </Link>
+      ) : (
+        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
+          <Image src={src} alt="" className="w-20 mx-auto" />
+          <p className="mt-4">{title}</p>
+        </div>
+      )}
+    </div>
+  ));
 };
 
-const Skills = () => {
+const Skills = ({ skills }) => {
   return (
-    <>
-      <h2 className="font-bold text-8xl w-full text-center">Skills</h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-        p-8 shadow-dark cursor-pointer"
-          whileHover={{ scale: 1.05 }}>
-          WEB
-        </motion.div>
-        <Skill name="HTML" x="-19vw" y="2vw" />
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="Javascript" x="19vw" y="1vw" />
-        <Skill name="ReactJS" x="0vw" y="11vw" />
-        <Skill name="NextJS" x="-3vw" y="-18vw" />
-        <Skill name="Redux" x="15vw" y="-12vw" />
-        <Skill name="ThreeJS" x="30vw" y="-5vw" />
-        <Skill name="GitHub" x="-22vw" y="-8vw" />
-        <Skill name="Figma" x="-20vw" y="14vw" />
-        <Skill name="Tailwind CSS" x="19vw" y="15vw" />
-        <Skill name="Jokes" x="-38.5vw" y="2vw" />
-      </div>
-    </>
+    <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-dark">
+      {skills.map(({ name, elements }) => (
+        <div key={name}>
+          <div>
+            <h3 className="font-bold text-3xl text-dark/95 border-b-4 border-dark/90 inline-block mt-10 pb-1">
+              {name}
+            </h3>
+          </div>
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-base font-medium text-center py-8 px-12 sm:px-0">
+            <SkillElement elements={elements} />
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
