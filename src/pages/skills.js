@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '@/components/Layout';
+import AnimatedText from '@/components/AnimatedText';
 import {
   javascript,
   html,
@@ -85,8 +86,7 @@ const skills = () => {
       </Head>
       <main className="flex w-full flex-col justify-center">
         <Layout className="pt-16">
-          <h2 className="font-bold text-5xl w-full text-center">Skills</h2>
-
+          <AnimatedText text="Force has no place where there is need of skill." className="mb-5" />
           <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-dark">
             <Skills skills={technologies} />
           </div>
