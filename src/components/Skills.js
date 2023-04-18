@@ -30,9 +30,9 @@ const Skills = ({ skills }) => {
       {skills.map(({ name, elements }) => (
         <motion.div
           key={name}
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 1, type: 'spring' }}>
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}>
           <div>
             <h3 className="font-bold text-3xl text-dark/95 border-b-4 border-dark/90 inline-block mt-10 pb-1">
               {name}
