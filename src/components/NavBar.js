@@ -32,13 +32,13 @@ const NavBar = () => {
         <CustomLink href="/skills" title="Skills" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="ml-4" />
       </nav>
-      <nav className="flex items-center justify-center flex-wrap">
+      <nav className="flex items-center justify-center flex-wrap ">
         <motion.a
           href="https://www.instagram.com/a.l.o.n.g.o/"
           target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className="w-6 mr-3">
+          className="w-6 mr-3 ">
           <InstagramIcon />
         </motion.a>
         <motion.a

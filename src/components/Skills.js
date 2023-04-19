@@ -15,7 +15,7 @@ const SkillElement = ({ elements }) => {
           </div>
         </Link>
       ) : (
-        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
+        <div className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style} `}>
           <Image src={src} alt="" className="w-20 mx-auto" />
           <p className="mt-4">{title}</p>
         </div>
@@ -26,7 +26,7 @@ const SkillElement = ({ elements }) => {
 
 const Skills = ({ skills }) => {
   return (
-    <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-dark">
+    <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-dark dark:text-light">
       {skills.map(({ name, elements }) => (
         <motion.div
           key={name}
@@ -34,7 +34,7 @@ const Skills = ({ skills }) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}>
           <div>
-            <h3 className="font-bold text-3xl text-dark/95 border-b-4 border-dark/90 inline-block mt-10 pb-1">
+            <h3 className="font-bold text-3xl text-dark/95 border-b-4 border-dark/90 dark:text-light/95 dark:border-light/90 inline-block mt-10 pb-1">
               {name}
             </h3>
           </div>
