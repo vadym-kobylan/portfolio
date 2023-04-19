@@ -43,12 +43,12 @@ const about = () => {
         <title>Vadym Kobylan | About Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">About me</h2>
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">About me</h2>
               <p className="font-medium">
                 Hi, I&apos;m Vadym Kobylan, a web developer, and I&apos;m passionate about making
                 stunning and engaging digital experiences that that delight users and drive results.
@@ -78,7 +78,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={10} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 text-right">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-right">
                   pet projects completed
                 </h2>
               </div>
@@ -87,7 +87,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={1.5} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 text-right">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-right">
                   years of study experience
                 </h2>
               </div>

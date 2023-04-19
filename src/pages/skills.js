@@ -87,7 +87,7 @@ const skills = () => {
       <main className="flex w-full flex-col justify-center">
         <Layout className="pt-16">
           <AnimatedText text="Force has no place where there is need of skill." className="mb-5" />
-          <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-dark">
+          <div className="">
             <Skills skills={technologies} />
           </div>
         </Layout>
