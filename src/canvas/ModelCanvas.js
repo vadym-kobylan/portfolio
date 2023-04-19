@@ -1,12 +1,11 @@
-import { Suspense, useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-
 import Model from './Model';
 
 const ModelCanvas = () => (
   <Canvas
-    style={{height: 620}}
+    style={{ height: 620 }}
     frameloop="demand"
     shadows
     camera={{ position: [1, 1.5, 2.5], fov: 25 }}
@@ -19,9 +18,9 @@ const ModelCanvas = () => (
       shadow-mapSize-height={1024}
     />
 
-    <group scale={0.7} position={[0, -0.63, 0]} castShadow>
+    <Suspense fallback={null}>
       <Model />
-    </group>
+    </Suspense>
 
     <OrbitControls
       enableZoom={false}

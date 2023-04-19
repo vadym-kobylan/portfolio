@@ -7,11 +7,11 @@ const Model = (props) => {
   const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions[names[0]].play();
+    actions["Armature_1.003Action"].play();
   }, [names]);
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} scale={0.7} position={[0, -0.63, 0]} castShadow>
       <group name="Scene">
         <group name="Armature">
           <primitive object={nodes.Hips} />
