@@ -202,7 +202,7 @@ const NavBar = () => {
             {mode === 'dark' ? (
               <Image src={<SunIcon className={'fill-dark'} />} />
             ) : (
-              <Image src={<MoonIcon className={'fill-dark'} />} />
+              <Image src={<MoonIcon className={'fill-dark'} />} /> //image
             )}
           </button>
         </motion.div>
