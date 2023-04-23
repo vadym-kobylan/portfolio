@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import React, { useState, useRef, useEffect } from 'react';
 import Logo from './Logo';
 import {
@@ -201,9 +200,9 @@ const NavBar = () => {
             className={`mt-7 flex items-center justify-center rounded-full p-1 
           ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
             {mode === 'dark' ? (
-              <Image src={<SunIcon className={'fill-dark'} />} />
+              <SunIcon className={'fill-dark md:w-5 h-auto' } />
             ) : (
-              <Image src={<MoonIcon className={'fill-dark'} />} /> //image
+                <MoonIcon className={'fill-dark md:w-5 h-auto'} />
             )}
           </button>
         </motion.div>
