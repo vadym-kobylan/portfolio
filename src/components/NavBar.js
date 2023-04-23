@@ -200,9 +200,9 @@ const NavBar = () => {
             className={`mt-7 flex items-center justify-center rounded-full p-1 
           ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
             {mode === 'dark' ? (
-              <SunIcon className={'fill-dark md:w-5 h-auto' } />
+              <SunIcon className={'fill-dark md:w-7 h-auto' } />
             ) : (
-                <MoonIcon className={'fill-dark md:w-5 h-auto'} />
+                <MoonIcon className={'bg-dark md:w-7 h-auto'} />
             )}
           </button>
         </motion.div>
