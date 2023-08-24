@@ -14,9 +14,9 @@ import {
   tailwind,
 } from '../../public/images/icons';
 import Skills from '@/components/Skills';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const skills = () => {
-
   const technologies = [
     {
       name: 'Core: ',
@@ -85,9 +85,14 @@ const skills = () => {
         <title>Vadym Kobylan | Skills Page</title>
         <meta name="description" content="any description" />
       </Head>
+      <TransitionEffect />
       <main className="flex w-full flex-col justify-center">
         <Layout className="pt-16">
-          <AnimatedText text="Force has no place where there is need of skill." className="mb-5 text-[4.8rem]" />
+          <AnimatedText
+            text="Force has no place where there is need of skill."
+            className="mb-5 text-[4.8rem]
+          xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-5xl sm:!text-3xl"
+          />
           <div className="">
             <Skills skills={technologies} />
           </div>

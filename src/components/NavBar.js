@@ -89,7 +89,7 @@ const NavBar = () => {
   useOutsideAlerter(wrapperRef, closeRef, setIsOpen);
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative lg:px-15 md:px-12 sm:px-10 xs:px-8">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative lg:px-15 lg:py-11 md:px-12 sm:px-10 xs:px-8 ">
       <button
         ref={closeRef}
         className=" flex-col justify-center items-center hidden lg:flex"
@@ -200,9 +200,9 @@ const NavBar = () => {
             className={`mt-7 flex items-center justify-center rounded-full p-1 
           ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
             {mode === 'dark' ? (
-              <SunIcon className={'fill-dark md:w-7 h-auto' } />
+              <SunIcon className={'fill-dark md:w-7 h-auto'} />
             ) : (
-                <MoonIcon className={'bg-dark md:w-7 h-auto'} />
+              <MoonIcon className={'bg-dark md:w-7 h-auto'} />
             )}
           </button>
         </motion.div>
