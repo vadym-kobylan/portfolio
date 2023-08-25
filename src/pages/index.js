@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Head>
         <title>Vadym Kobylan | Home</title>
-        <meta name="Vadym Kobylan | FrontEnd Dev" content="Created by Vadym Kobylan" />
+        <meta name="Vadym Kobylan" content="FrontEnd Developer" />
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light lg:min-h-[80vh]">
