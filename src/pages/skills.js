@@ -82,7 +82,7 @@ const skills = () => {
   return (
     <>
       <Head>
-        <title>Vadym Kobylan | Skills Page</title>
+        <title>Vadym Kobylan | Skills</title>
         <meta name="description" content="any description" />
       </Head>
       <TransitionEffect />
