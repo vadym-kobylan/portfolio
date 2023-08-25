@@ -6,16 +6,16 @@ import { useMediaQuery } from 'react-responsive';
 import Model from './Model';
 
 const ModelCanvas = () => {
-  const isLg = useMediaQuery({ query: '(max-width: 1023px)' });
-  const isMd = useMediaQuery({ query: '(max-width: 767px)' });
-  const isSm = useMediaQuery({ query: '(max-width: 639px)' });
-  const isXs = useMediaQuery({ query: '(max-width: 479px)' });
+  const checkMobile = useMediaQuery({ query: '(max-width: 1023px)' });
+  const [isMobile, setIsMobile] = useState(true);
 
-  const canvasHeight = isLg ? (isMd ? (isSm ? (isXs ? 400 : 480) : 480) : 480) : 600;
+  useEffect(() => {
+    setIsMobile(checkMobile);
+  }, [checkMobile]);
 
   return (
     <Canvas
-      style={{ height: canvasHeight, pointerEvents: isLg ? 'none' : 'auto' }}
+      style={{ height: isMobile ? 480 : 600, pointerEvents: isMobile ? 'none' : 'auto' }}
       frameloop="demand"
       shadows
       camera={{ position: [1, 1.5, 2.5], fov: 25 }}
