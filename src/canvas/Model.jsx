@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 
+
 const Model = (props) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/model.glb');
+  const { nodes, materials, animations } = useGLTF.load('/model.glb');
   const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
