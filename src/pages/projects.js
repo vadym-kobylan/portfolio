@@ -13,9 +13,6 @@ import { NextSeo } from 'next-seo';
 const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
-  const seoTitle = 'Vadym Kobylan | Projects';
-  const seoDesc =
-    'Vadym Kobylan, a frontend software engineer who loves building cool things with code.';
   return (
     <article
       className="w-full flex items-center justify-between relative rounded-br-2xl
@@ -116,6 +113,9 @@ const Project = ({ type, title, img, link, github }) => {
 };
 
 const project = () => {
+  const seoTitle = 'Vadym Kobylan | Projects';
+  const seoDesc =
+    'Vadym Kobylan, a frontend software engineer who loves building cool things with code.';
   return (
     <>
       <Head>
