@@ -8,10 +8,14 @@ import { GithubIcon } from '@/components/Icons';
 import project1 from '../../public/images/projects/project.png';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
+import { NextSeo } from 'next-seo';
 
 const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+  const seoTitle = 'Vadym Kobylan | Projects';
+  const seoDesc =
+    'Vadym Kobylan, a frontend software engineer who loves building cool things with code.';
   return (
     <article
       className="w-full flex items-center justify-between relative rounded-br-2xl
@@ -186,6 +190,16 @@ const project = () => {
           </div>
         </Layout>
       </main>
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        openGraph={{
+          title: seoTitle,
+          description: seoDesc,
+          url: `https://vadym-kobylan.vercel.app/projects/`,
+          site_name: 'Vadym Kobylan',
+        }}
+      />
     </>
   );
 };

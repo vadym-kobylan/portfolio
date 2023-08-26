@@ -8,14 +8,15 @@ import HireMe from '@/components/HireMe';
 import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg';
 import ModelCanvas from '@/canvas/ModelCanvas';
 import TransitionEffect from '@/components/TransitionEffect';
+import { NextSeo } from 'next-seo';
 
 export default function Home() {
+  const seoTitle = 'Vadym Kobylan | Home';
+  const seoDesc =
+    'Vadym Kobylan, a frontend software engineer who loves building cool things with code.';
+
   return (
     <>
-      <Head>
-        <title>Vadym Kobylan | Home</title>
-        <meta name="Vadym Kobylan" content="FrontEnd Developer" />
-      </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light lg:min-h-[80vh]">
         <Layout className="pt-0 xl:pt-6 lg:pt-0 md:pt-0 sm:pt-0 lg:mt-2 ">
@@ -59,6 +60,17 @@ export default function Home() {
           <Image src={lightBulb} alt={'Vadym Kobylan'} className="w-full h-auto" />
         </div>
       </main>
+
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        openGraph={{
+          title: seoTitle,
+          description: seoDesc,
+          url: `https://vadym-kobylan.vercel.app/`,
+          site_name: 'Vadym Kobylan',
+        }}
+      />
     </>
   );
 }

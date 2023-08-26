@@ -15,6 +15,7 @@ import {
 } from '../../public/images/icons';
 import Skills from '@/components/Skills';
 import TransitionEffect from '@/components/TransitionEffect';
+import { NextSeo } from 'next-seo';
 
 const skills = () => {
   const technologies = [
@@ -78,7 +79,9 @@ const skills = () => {
       ],
     },
   ];
-
+  const seoTitle = 'Vadym Kobylan | Skills';
+  const seoDesc =
+    'Vadym Kobylan, a frontend software engineer who loves building cool things with code.';
   return (
     <>
       <Head>
@@ -98,6 +101,16 @@ const skills = () => {
           </div>
         </Layout>
       </main>
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        openGraph={{
+          title: seoTitle,
+          description: seoDesc,
+          url: `https://vadym-kobylan.vercel.app/skills/`,
+          site_name: 'Vadym Kobylan',
+        }}
+      />
     </>
   );
 };

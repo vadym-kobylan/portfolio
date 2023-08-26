@@ -8,6 +8,7 @@ import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import TransitionEffect from '@/components/TransitionEffect';
+import { NextSeo } from 'next-seo';
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -38,6 +39,9 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
+  const seoTitle = 'Vadym Kobylan | About';
+  const seoDesc =
+    'Vadym Kobylan, a frontend software engineer who loves building cool things with code.';
   return (
     <>
       <Head>
@@ -112,6 +116,16 @@ const about = () => {
           <Experience />
         </Layout>
       </main>
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        openGraph={{
+          title: seoTitle,
+          description: seoDesc,
+          url: `https://vadym-kobylan.vercel.app/about/`,
+          site_name: 'Vadym Kobylan',
+        }}
+      />
     </>
   );
 };
