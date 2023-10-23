@@ -34,7 +34,7 @@ export default function Home() {
                 Hello, and welcome to my profile! 👋
               </p>
               <p className="mb-4 text-base font-medium md:text-sm sm:text-xs">
-                I'm a dedicated React developer with a strong passion for crafting interactive and
+                I&apos;m a dedicated React developer with a strong passion for crafting interactive and
                 visually appealing web applications.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
