@@ -8,7 +8,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]">
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]">
       <LiIcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
@@ -28,11 +28,11 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
-        <p className="font-medium w-full md:text-sm">{work}</p>
-        <p className="font-medium w-full md:text-sm">{work}</p>
-        <p className="font-medium w-full md:text-sm">{work}</p>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        {work.map((el, id) => (
+          <p key={id} className="font-medium w-full md:text-sm">
+            {el}
+          </p>
+        ))}
       </motion.div>
     </li>
   );
@@ -44,6 +44,11 @@ const Experience = () => {
     target: ref,
     offset: ['start end', 'center start'],
   });
+
+  const currDate =
+    new Date().toLocaleString('en-US', { month: 'short' }) +
+    ' ' +
+    new Date().getFullYear().toString();
 
   return (
     <div className="my-64 md:my-32">
@@ -61,11 +66,24 @@ const Experience = () => {
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
             position="FrontEnd Developer"
+            company="UISS"
+            companyLink="https://www.upwork.com/agencies/uiss/"
+            time="Jan 2021 – Aug 2023"
+            address="Lviv, Ukraine"
+            work={[
+              '– Developed and maintained web applications based on React, collaborating with a team of front- and back-end developers.',
+              '– Worked with React, Redux, HTML, CSS, and SASS, and had experience with API integration.',
+              '– Ensured a bug-free user experience through effective troubleshooting and performance optimization.',
+            ]}
+          />
+
+          <Details
+            position="FrontEnd Developer"
             company="*Your Company Name*"
             companyLink="https://blank.page/*"
-            time="2023-Present"
+            time={`${currDate} – Present`}
             address="*Your company address*"
-            work="-"
+            work={['-', '-', '-', '-']}
           />
         </ul>
       </div>

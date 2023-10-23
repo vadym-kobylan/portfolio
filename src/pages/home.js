@@ -29,11 +29,13 @@ export default function Home() {
                 text="Turning Vision Into Reality With Code And Design."
                 className="!text-6xl !text-left
                 xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-5xl sm:!text-3xl"
-              />
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                As a beginner Front-End developer, I am dedicated to turning ideas into innovative
-                web applications. Explore my latest projects and articles, showcasing my expertise
-                in React.js and web development.
+              /> 
+              <p className="mb-1 text-base font-medium md:text-sm sm:text-xs text-left w-[100%]">
+                Hello, and welcome to my profile! 👋
+              </p>
+              <p className="mb-4 text-base font-medium md:text-sm sm:text-xs">
+                I'm a dedicated React developer with a strong passion for crafting interactive and
+                visually appealing web applications.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link

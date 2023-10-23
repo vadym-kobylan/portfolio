@@ -111,9 +111,8 @@ const about = () => {
               </div>
             </div>
           </div>
-
-          <Education />
           <Experience />
+          <Education />
         </Layout>
       </main>
       <NextSeo
