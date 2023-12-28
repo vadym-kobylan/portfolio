@@ -68,7 +68,7 @@ const Experience = () => {
             position="FrontEnd Developer"
             company="UISS"
             companyLink="https://www.upwork.com/agencies/uiss/"
-            time="Jan 2021 – Aug 2023"
+            time="Jan 2022 – Aug 2023"
             address="Lviv, Ukraine"
             work={[
               '– Developed and maintained web applications based on React, collaborating with a team of front- and back-end developers.',
