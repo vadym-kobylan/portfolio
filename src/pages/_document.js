@@ -6,10 +6,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <meta
-          name="google-site-verification"
-          content="XNkTeerlfA-UusDrNmXnONG5ZZybXyAFrDi-yOOCmwo"
-        />
         <Script id="theme-switcher" strategy="beforeInterective">
           {`if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark')
