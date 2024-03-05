@@ -7,7 +7,8 @@ import Image from 'next/image';
 import { GithubIcon } from '@/components/Icons';
 import project1 from '../../public/images/projects/project.png';
 import designComedy_img from '../../public/images/projects/designComedy.jpg';
-import designComedyMasterclas_img from '../../public/images/projects/designComedy_master.png';
+import finspire_image from '../../public/images/projects/finspire.webp';
+
 import reelsMe_img from '../../public/images/projects/ReelsMe.jpg';
 import reactPizza_png from '../../public/images/projects/reactPizza.png';
 import portfolio_png from '../../public/images/projects/portfolio.png';
@@ -140,18 +141,18 @@ const project = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="Design Comedy"
-                summary="The project was commissioned by a design studio to present their author's course."
-                link="https://design-comedy.webflow.io/"
-                img={designComedy_img}
+                title="Finspire"
+                summary="Financial consulting, accounting, management reporting, integration of accounting systems, development of financial models."
+                link="https://finspire.webflow.io/"
+                img={finspire_image}
                 type="Webflow Project"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Design Master Class"
-                link="https://design-master-class.webflow.io/"
-                img={designComedyMasterclas_img}
+                title="Design Comedy"
+                link="https://comedy.figmatica.com/"
+                img={designComedy_img}
                 type="Webflow Project"
               />
             </div>
@@ -165,21 +166,27 @@ const project = () => {
             </div>
             <div className="col-span-12">
               <FeaturedProject
-                title="React Pizza"
+                title="React Pizza v2"
                 summary={
                   <div>
-                    <p>📝 Full Stack:</p>
-                    <p>- ReactJS</p>
-                    <p>- Redux (library for storing data on the client side)</p>
-                    <p>- redux-thunk (additional library for Redux. Asynchronous actions)</p>
-                    <p>- React Router (library for realizing transitions without page reloading)</p>
-                    <p>- Axios (library for sending AJAX requests)</p>
-                    <p>- json-server (for storing pizzas on a fake server)</p>
+                    <p>📝 Technology:</p>
+                    <p>- ReactJS 18</p>
+                    <p>- TypeScript</p>
+                    <p>- Redux Toolkit (data storage)</p>
+                    <p>- React Router v6 (navigation)</p>
+                    <p>- Axios + Fetch (sending request to backend)</p>
+                    <p>- React Hooks (hooks)</p>
+                    <p>- Prettier (code formatting)</p>
+                    <p>- CSS-Modules / SCSS (styling)</p>
+                    <p>- React Content Loader (skeleton)</p>
+                    <p>- React Pagination (pagination)</p>
+                    <p>- Lodash.Debounce</p>
+                    <p>- Code Splitting, React Loadable, useWhyDidYouUpdate</p>
                   </div>
                 }
-                link="https://react-pizza-beta.vercel.app/"
+                link="https://react-pizza-v2-by-alongo.vercel.app/"
                 img={reactPizza_png}
-                github="https://github.com/vadym-kobylan/react-pizza"
+                github="https://github.com/vadym-kobylan/react-pizza-v2"
                 type="React Project"
               />
             </div>
