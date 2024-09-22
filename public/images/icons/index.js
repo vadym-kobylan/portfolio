@@ -8,6 +8,8 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import nextjs from "./tech/nextjs-2.png";
 import tailwind from "./tech/tailwind.png";
+import typescript from "./tech/typescript.png";
+import webflow from "./tech/webflow.png";
 
 export {
   css,
@@ -19,5 +21,7 @@ export {
   reactjs,
   redux,
   nextjs,
-  tailwind
+  tailwind,
+  typescript,
+  webflow
 };

@@ -97,7 +97,7 @@ const about = () => {
                   <AnimatedNumbers value={5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-right xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  pet projects completed
+                  projects completed
                 </h2>
               </div>
 
@@ -106,7 +106,7 @@ const about = () => {
                   <AnimatedNumbers value={1.5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-right xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  years of study experience
+                  years of experience
                 </h2>
               </div>
             </div>

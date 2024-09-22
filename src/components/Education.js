@@ -8,7 +8,7 @@ const Details = ({ type, time, name, link, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]">
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]">
       <LiIcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
@@ -55,7 +55,7 @@ const Education = () => {
             type="Bachelor of Software Engineering"
             link="https://www.wunu.edu.ua/"
             name="WUNU"
-            time="09.2020 - Present"
+            time="2020 - 2024"
             place="West Ukrainian National University"
             info="The purpose of the program is to train specialists capable of analyzing, estimating costs, designing,
             to design, test and support the software of complex systems
@@ -70,6 +70,15 @@ const Education = () => {
             time="09.2022 - 12.2022"
             place="Apiko Courses"
             info="The 3-month training intensive is devoted to web development and front-end direction using React technologies. The course covers theoretical and practical aspects - JavaScript, working with DOM, React and Redux."
+          />
+
+          <Details
+            type="Frontend Academy"
+            link="https://linkupst.com/"
+            name="Link Up"
+            time="01.2023 - 03.2023"
+            place="Link Up Academy"
+            info="At Linkup Academy, I enhanced my React development skills through mentorship and hands-on projects. One key project I worked on was 'Linkstagam,' an Instagram-like application. In this project, I developed the entire frontend and integrated it with a provided backend."
           />
         </ul>
       </div>

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import {
   javascript,
+  typescript,
   html,
   css,
   reactjs,
@@ -12,6 +13,7 @@ import {
   figma,
   nextjs,
   tailwind,
+  webflow,
 } from '../../public/images/icons';
 import Skills from '@/components/Skills';
 import TransitionEffect from '@/components/TransitionEffect';
@@ -32,6 +34,11 @@ const skills = () => {
           src: javascript,
           title: 'JavaScript',
           style: 'shadow-yellow-500',
+        },
+        {
+          src: typescript,
+          title: 'TypeScript',
+          style: 'shadow-blue-500',
         },
       ],
     },
@@ -69,6 +76,12 @@ const skills = () => {
     {
       name: 'Tools: ',
       elements: [
+        {
+          title: 'Webflow',
+          src: webflow,
+          style: 'shadow-sky-500',
+          href: 'https://webflow.com/',
+        },
         { title: 'Git', src: git, style: 'shadow-orange-500', href: 'https://git-scm.com/' },
         {
           title: 'Tailwind CSS',

@@ -8,6 +8,9 @@ import { GithubIcon } from '@/components/Icons';
 import project1 from '../../public/images/projects/project.png';
 import designComedy_img from '../../public/images/projects/designComedy.jpg';
 import finspire_image from '../../public/images/projects/finspire.webp';
+import wid from '../../public/images/projects/wid.jpg';
+import acvian from '../../public/images/projects/acvian.jpg';
+import ore from '../../public/images/projects/ore.jpg';
 
 import reelsMe_img from '../../public/images/projects/ReelsMe.jpg';
 import reactPizza_png from '../../public/images/projects/reactPizza.png';
@@ -141,10 +144,26 @@ const project = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="Finspire"
+                title="Acvian"
                 summary="Financial consulting, accounting, management reporting, integration of accounting systems, development of financial models."
-                link="https://finspire.webflow.io/"
-                img={finspire_image}
+                link="https://acvian-1c5c40.webflow.io/"
+                img={acvian}
+                type="Webflow Project"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                title="Women in Defence"
+                link="https://www.widukraine.org/"
+                img={wid}
+                type="Webflow Project"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                title="One Right Eye"
+                link="https://www.onerighteye.com/"
+                img={ore}
                 type="Webflow Project"
               />
             </div>
@@ -158,12 +177,13 @@ const project = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="ReelsMe App"
-                link="https://www.reelsme.app/"
-                img={reelsMe_img}
+                title="Finspire"
+                link="https://finspire.webflow.io/"
+                img={finspire_image}
                 type="Webflow Project"
               />
             </div>
+
             <div className="col-span-12">
               <FeaturedProject
                 title="React Pizza v2"

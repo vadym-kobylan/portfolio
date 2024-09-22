@@ -29,9 +29,19 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           {time} | {address}
         </span>
         {work.map((el, id) => (
-          <p key={id} className="font-medium w-full md:text-sm">
-            {el}
-          </p>
+          <div key={id} className="work-item mt-4">
+            {/* Render the title */}
+            <p className="font-medium w-full md:text-sm">
+              <strong>{el.title}</strong>
+            </p>
+
+            {/* Render the points */}
+            {el.points.map((point, index) => (
+              <p key={index} className="font-medium w-full md:text-sm">
+                {point}
+              </p>
+            ))}
+          </div>
         ))}
       </motion.div>
     </li>
@@ -65,25 +75,51 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="FrontEnd Developer"
+            position="Frontend Developer"
             company="UISS"
             companyLink="https://www.upwork.com/agencies/uiss/"
-            time="Jan 2022 – Aug 2023"
+            time="Apr 2023 – Oct 2023"
             address="Lviv, Ukraine"
             work={[
-              '– Developed and maintained web applications based on React, collaborating with a team of front- and back-end developers.',
-              '– Worked with React, Redux, HTML, CSS, and SASS, and had experience with API integration.',
-              '– Ensured a bug-free user experience through effective troubleshooting and performance optimization.',
+              {
+                title: 'Customer Applications',
+                points: [
+                  '– Developed and maintained web applications based on React, collaborating with a team of front- and back-end developers.',
+                  '– Worked with React, Redux, HTML, CSS, and SASS, and had experience with API integration.',
+                  '– Ensured a bug-free user experience through effective troubleshooting and performance optimization.',
+                ],
+              },
+              {
+                title: 'React Pizza | Pet Project',
+                points: [
+                  '– Developed a React Pizza app using ReactJS 18 and TypeScript. Managed state with Redux Toolkit and handled navigation with React Router v6.',
+                  '– Used Axios for backend communication. Styled the app with CSS Modules/SCSS and maintained clean code with Prettier.',
+                  '– Added features like skeleton loading with React Content Loader, pagination, and debouncing with Lodash.',
+                ],
+              },
             ]}
           />
 
           <Details
-            position="FrontEnd Developer"
-            company="*Your Company Name*"
-            companyLink="https://blank.page/*"
+            position="Webflow Developer"
+            company="Figmatica"
+            companyLink="https://www.figmatica.com/"
             time={`${currDate} – Present`}
-            address="*Your company address*"
-            work={['-', '-', '-', '-']}
+            address="Lviv, Ukraine"
+            work={[
+              {
+                title: 'One Right Eye',
+                points: [
+                  '– Developed the website for One Righte Eye, integrating a CMS and connecting the backend. Implemented a full authentication system, including login, registration, and user account management. Utilized JavaScript and React extensively to create a seamless user experience and ensure smooth functionality across the platform.',
+                ],
+              },
+              {
+                title: 'Acvian | EOR provider',
+                points: [
+                  '– Developed the Acvian website by implementing a flexible CMS system and integrating a dynamic calculator feature (Forecast your employee cost). Created over 30 pages with engaging designs and animations to enhance user experience and maintain a high level of interactivity throughout the site.',
+                ],
+              },
+            ]}
           />
         </ul>
       </div>
