@@ -9,6 +9,7 @@ import project1 from '../../public/images/projects/project.png';
 import designComedy_img from '../../public/images/projects/designComedy.jpg';
 import finspire_image from '../../public/images/projects/finspire.webp';
 import wid from '../../public/images/projects/wid.jpg';
+import futuristImg from '../../public/images/projects/futurist.jpg';
 import acvian from '../../public/images/projects/acvian.jpg';
 import ore from '../../public/images/projects/ore.jpg';
 
@@ -148,6 +149,14 @@ const project = () => {
                 summary="Financial consulting, accounting, management reporting, integration of accounting systems, development of financial models."
                 link="https://acvian-1c5c40.webflow.io/"
                 img={acvian}
+                type="Webflow Project"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                title="Futurist School"
+                link="https://www.futuristschool.com/"
+                img={futuristImg}
                 type="Webflow Project"
               />
             </div>
